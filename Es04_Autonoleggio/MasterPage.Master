@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Es04_Autonoleggio.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Autonoleggio 5infC</title>
+    <link rel="icon" href="img/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="img/favicon.ico"
+        type="image/ico" />
+    <script src="Scripts/jquery-3.6.0.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="ctpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm fixed-top bg-dark navbar-dark">
+                <!-- Brand/logo -->
+                <a class="navbar-brand" href="home.aspx">
+                    <img src="img/raspberry.png" alt="logo" style="width: 40px;" />
+                </a>
+                <a class="navbar-brand" href="home.aspx">Autonoleggio</a>
+                <button class="navbar-toggler btn btn-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="lnkHome" runat="server" OnClick="lnkHome_Click" >Home</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="lnkLogin" runat="server" OnClick="lnkLogin_Click" >Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton class="nav-link" ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" >Logout</asp:LinkButton>
+                        </li>
+                    </ul>
+                    <asp:LinkButton class="nav-link" ID="lnkUsername" runat="server" ForeColor="Yellow"></asp:LinkButton>
+                </div>
+            </nav>
+            <br /><br /><br /><br /><br />
+            <asp:ContentPlaceHolder ID="ctpBody" runat="server">
+            </asp:ContentPlaceHolder>
+            <br /><br /><br /><br /><br />
+            <nav class="navbar navbar-expand-sm bg-dark fixed-bottom justify-content-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <span>Autonoleggio</span>
+                    </li>
+                    <li class="nav-item">
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" target="_blank" data-bs-toggle="modal" data-bs-target="#myModal">&copy; 5 C informatica</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Realizzato dalla 5Cinf a.s. 2021-2022</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Inserire foto....
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    </form>
+</body>
+</html>
